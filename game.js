@@ -10,6 +10,12 @@ function nextSequence()
   gamePattern.push(randomChosenColour);
   //console.log(randomChosenColour);
   //return randomChosenColour;
+
+  //JQuery used to choose a random colour and get it to flash
+  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+
+  var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
+  audio.play();
 }
 
 nextSequence();
